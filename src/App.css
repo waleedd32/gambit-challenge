@@ -25,6 +25,16 @@
   justify-content: center;
   padding: 15px 10px;
 }
+.app__header .app__logo {
+  margin-bottom: 16px;
+  color: white;
+}
+input[type="text"] {
+  width: 299px;
+  padding: 7px;
+  border: 0;
+  border-radius: 9px;
+}
 
 .app__subheader img {
   width: 40px;
