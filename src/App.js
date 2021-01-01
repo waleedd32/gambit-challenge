@@ -10,6 +10,12 @@ function App() {
           <input type="text" />
         </div>
       </header>
+      <div className="app__subheader">
+        <div>
+          <p>Time of registery:</p>
+        </div>
+        <img src="https://i.ibb.co/PxGygfW/delivery.png" alt="Truck" />
+      </div>
 
       {/* This is going to be Gambit challenge */}
       {/* task Option 2: Web or native app */}
