@@ -4,7 +4,13 @@ import "./App.css";
 function App() {
   return (
     <div className="app">
-      TUF-2000M Registers
+      <header className="app__header">
+        <div className="app__container">
+          <h1 className="app__logo">TUF-2000M Registers</h1>
+          <input type="text" />
+        </div>
+      </header>
+
       {/* This is going to be Gambit challenge */}
       {/* task Option 2: Web or native app */}
       {/*a graphical solution, create an app that retrieves and parses 
