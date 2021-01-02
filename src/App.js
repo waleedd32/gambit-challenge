@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import "./App.css";
+import TwoMaps from "./TwoMaps";
 import ValueBox from "./components/ValueBox";
 
 function App() {
   const [data, setData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [dataContent, setDataContent] = useState([]);
+  const obj = {};
   const fetchData = () => {
     let corsAnywhere = "https://cors-anywhere.herokuapp.com/";
     let gambitlabs = "http://tuftuf.gambitlabs.fi/feed.txt";
@@ -21,6 +24,17 @@ function App() {
   useEffect(() => {
     fetchData();
   }, []);
+
+  useEffect(() => {
+    data.forEach((d) => {
+      var key = d.split(":")[0];
+      var value = d.split(":")[1];
+      obj[key] = value;
+    });
+    const k = Object.values(obj);
+
+    setDataContent(k);
+  }, [data]);
 
   return (
     <div className="app">
@@ -42,9 +56,9 @@ function App() {
         </div>
         <img src="https://i.ibb.co/PxGygfW/delivery.png" alt="Truck" />
       </div>
-      {data.map((value) => (
-        <ValueBox value={value} />
-      ))}
+      <div>
+        <TwoMaps sisalto={dataContent} />
+      </div>
     </div>
   );
 }
