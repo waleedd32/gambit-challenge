@@ -1,16 +1,24 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
-  let corsAnywhere = "https://cors-anywhere.herokuapp.com/";
-  let gambitlabs = "http://tuftuf.gambitlabs.fi/feed.txt";
-  fetch(corsAnywhere + gambitlabs)
-    .then((response) => response.text())
-    .then((result) => {
-      const theDataArr = result.replace(/\n/g, " ");
-      const array = theDataArr.split(" ");
-      console.log(array);
-    });
+  const [data, setData] = useState([]);
+  const fetchData = () => {
+    let corsAnywhere = "https://cors-anywhere.herokuapp.com/";
+    let gambitlabs = "http://tuftuf.gambitlabs.fi/feed.txt";
+    fetch(corsAnywhere + gambitlabs)
+      .then((response) => response.text())
+      .then((result) => {
+        const theDataArr = result.replace(/\n/g, " ");
+        const array = theDataArr.split(" ");
+        console.log(array);
+        setData(array);
+      });
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <div className="app">
@@ -26,13 +34,9 @@ function App() {
         </div>
         <img src="https://i.ibb.co/PxGygfW/delivery.png" alt="Truck" />
       </div>
-
-      {/* This is going to be Gambit challenge */}
-      {/* task Option 2: Web or native app */}
-      {/*a graphical solution, create an app that retrieves and parses 
-      the data and presents it as is. The key point 
-      is to make use of data available in a backend, 
-      and present it in a mobile friendly way. */}
+      {data.map((value) => (
+        <div>{value}</div>
+      ))}
     </div>
   );
 }
