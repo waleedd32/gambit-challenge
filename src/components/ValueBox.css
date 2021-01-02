@@ -1,0 +1,9 @@
+.valueBox {
+  margin-right: 15px;
+  min-width: 90px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.valueBox__padding {
+  padding: 16px;
+}

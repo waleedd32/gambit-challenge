@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
+import ValueBox from "./components/ValueBox";
 
 function App() {
   const [data, setData] = useState([]);
@@ -35,7 +36,7 @@ function App() {
         <img src="https://i.ibb.co/PxGygfW/delivery.png" alt="Truck" />
       </div>
       {data.map((value) => (
-        <div>{value}</div>
+        <ValueBox value={value} />
       ))}
     </div>
   );
