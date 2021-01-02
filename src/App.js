@@ -65,7 +65,12 @@ function App() {
 
       <div className="app__subheader">
         <div>
-          <p>Time of registery:</p>
+          <p>
+            Time of registery:{" "}
+            <span className="app__registryTime">
+              {`${data[0]} ${data[1]} `}
+            </span>
+          </p>
         </div>
         <img src="https://i.ibb.co/PxGygfW/delivery.png" alt="Truck" />
       </div>
