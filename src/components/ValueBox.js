@@ -1,6 +1,6 @@
 import { Card, CardContent, Typography } from "@material-ui/core";
 import React from "react";
-import "./ValueBox.css";
+
 function ValueBox({ value }) {
   return (
     <Card className="valueBox">

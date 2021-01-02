@@ -5,6 +5,20 @@
   margin-bottom: 3px;
   cursor: pointer;
 }
+
+/* The + selector is used to select an element that is 
+directly after another specific element.
+ */
+.hover1:hover + .hover2 {
+  transform: scale(1.2);
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 1px rgba(0, 0, 0, 0.1);
+}
+.hover1:hover + .hover2 .MuiTypography-colorTextSecondary {
+  background-color: #f8f8f8;
+  color: #7c0000;
+}
+
 .twoMaps__item .indexBox__padding {
   padding: 16px;
 }

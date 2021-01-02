@@ -10,10 +10,10 @@ function TwoMaps({ searchTerm, filterResults, sisalto }) {
       {searchTerm === ""
         ? sisalto.map((value, index) => (
             <div>
-              <div className="twoMaps__item">
+              <div className="twoMaps__item hover1">
                 <IndexBox indexx={index + 1} />
               </div>
-              <div className="twoMaps__item">
+              <div className="twoMaps__item hover2">
                 <ValueBox value={value} />
               </div>
             </div>
