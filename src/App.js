@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import TwoMaps from "./TwoMaps";
-import ValueBox from "./components/ValueBox";
 
+import TwoMaps from "./TwoMaps";
 function App() {
   const [data, setData] = useState([]);
+  const [filterResults, setFilterResults] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [dataContent, setDataContent] = useState([]);
   const obj = {};
@@ -23,8 +23,7 @@ function App() {
 
   useEffect(() => {
     fetchData();
-  }, []);
-
+  }, [searchTerm]);
   useEffect(() => {
     data.forEach((d) => {
       var key = d.split(":")[0];
@@ -35,6 +34,20 @@ function App() {
 
     setDataContent(k);
   }, [data]);
+
+  useEffect(() => {
+    const mappedResult = data.map((d) => {
+      var key = d.split(":")[0];
+      var value = d.split(":")[1];
+      return {
+        avain: key,
+        value: value,
+      };
+    });
+
+    const results = mappedResult.filter((joka) => joka.avain === searchTerm);
+    setFilterResults(results);
+  }, [data, searchTerm]);
 
   return (
     <div className="app">
@@ -56,8 +69,13 @@ function App() {
         </div>
         <img src="https://i.ibb.co/PxGygfW/delivery.png" alt="Truck" />
       </div>
+
       <div>
-        <TwoMaps sisalto={dataContent} />
+        <TwoMaps
+          filterResults={filterResults}
+          sisalto={dataContent}
+          searchTerm={searchTerm}
+        />
       </div>
     </div>
   );
