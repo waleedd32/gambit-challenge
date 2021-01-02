@@ -85,3 +85,9 @@ body {
 .MuiCardContent-root {
   padding: 0px !important;
 }
+
+@media (min-width: 768px) {
+  .twoMaps {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
