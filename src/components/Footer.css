@@ -1,0 +1,20 @@
+.footer {
+  flex-shrink: 0;
+  background-color: #cc0000;
+  color: white;
+  padding: 15px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.footer ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer ul li {
+  display: flex;
+}
+a {
+  color: white;
+}

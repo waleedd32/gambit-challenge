@@ -3,6 +3,7 @@ import "./App.css";
 import "./components/ValueBox.css";
 import "./components/IndexBox.css";
 import TwoMaps from "./TwoMaps";
+import Footer from "./components/Footer";
 function App() {
   const [data, setData] = useState([]);
   const [filterResults, setFilterResults] = useState([]);
@@ -83,6 +84,7 @@ function App() {
           searchTerm={searchTerm}
         />
       </div>
+      <Footer />
     </div>
   );
 }
