@@ -11,12 +11,18 @@ function TwoMaps({ searchTerm, filterResults, sisalto }) {
         ? sisalto.map((value, index) => (
             <div>
               <div className="twoMaps__item">
+                <IndexBox indexx={index + 1} />
+              </div>
+              <div className="twoMaps__item">
                 <ValueBox value={value} />
               </div>
             </div>
           ))
         : filterResults.map(({ avain, value }, index) => (
             <div>
+              <div className="twoMaps__item">
+                <IndexBox indexx={avain} />
+              </div>
               <div className="twoMaps__item">
                 <ValueBox value={value} />
               </div>
