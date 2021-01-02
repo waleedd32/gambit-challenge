@@ -2,6 +2,14 @@ import React from "react";
 import "./App.css";
 
 function App() {
+  let corsAnywhere = "https://cors-anywhere.herokuapp.com/";
+  let gambitlabs = "http://tuftuf.gambitlabs.fi/feed.txt";
+  fetch(corsAnywhere + gambitlabs)
+    .then((response) => response.text())
+    .then((result) => {
+      console.log(result);
+    });
+
   return (
     <div className="app">
       <header className="app__header">

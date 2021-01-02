@@ -47,7 +47,9 @@ input[type="text"] {
   align-items: center;
   justify-content: space-between;
 }
-
+.app__subheader p {
+  margin: 4px;
+}
 .app__subheader img {
   width: 40px;
 }
