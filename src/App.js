@@ -4,6 +4,7 @@ import ValueBox from "./components/ValueBox";
 
 function App() {
   const [data, setData] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
   const fetchData = () => {
     let corsAnywhere = "https://cors-anywhere.herokuapp.com/";
     let gambitlabs = "http://tuftuf.gambitlabs.fi/feed.txt";
@@ -26,9 +27,15 @@ function App() {
       <header className="app__header">
         <div className="app__container">
           <h1 className="app__logo">TUF-2000M Registers</h1>
-          <input type="text" />
+          <input
+            type="text"
+            value={searchTerm}
+            placeholder="Search by index number"
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
         </div>
       </header>
+
       <div className="app__subheader">
         <div>
           <p>Time of registery:</p>
