@@ -8,7 +8,8 @@ function App() {
     .then((response) => response.text())
     .then((result) => {
       const theDataArr = result.replace(/\n/g, " ");
-      console.log(theDataArr);
+      const array = theDataArr.split(" ");
+      console.log(array);
     });
 
   return (
