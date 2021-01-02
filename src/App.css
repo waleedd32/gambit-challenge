@@ -7,6 +7,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+.app__registryTime {
+  background-color: #f0ad4e;
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
 .app__container {
   width: 90%;
   margin: 0 auto;
@@ -25,16 +31,26 @@
   justify-content: center;
   padding: 15px 10px;
 }
+
 .app__header .app__logo {
   margin-bottom: 16px;
   color: white;
 }
 input[type="text"] {
-  width: 299px;
   padding: 7px;
+  width: 300px;
   border: 0;
   border-radius: 9px;
 }
+
+.app__subheader p {
+  margin: 4px;
+}
+
+.app__subheader img {
+  width: 40px;
+}
+
 .app__subheader {
   background: var(--secondary-color);
   color: #fff;
@@ -47,9 +63,25 @@ input[type="text"] {
   align-items: center;
   justify-content: space-between;
 }
-.app__subheader p {
-  margin: 4px;
+
+body {
+  background-color: lightblue;
+  color: darkblue;
+  font-family: "robot", sans-serif;
 }
-.app__subheader img {
-  width: 40px;
+.twoMaps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+.twoMaps .twoMaps__item {
+  display: flex;
+  flex-direction: column;
+  border: 1px #ccc solid;
+  padding: 10px;
+  box-shadow: 1px 1px 2px #ccc;
+}
+
+.MuiCardContent-root {
+  padding: 0px !important;
 }
