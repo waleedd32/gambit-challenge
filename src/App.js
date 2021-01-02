@@ -7,7 +7,8 @@ function App() {
   fetch(corsAnywhere + gambitlabs)
     .then((response) => response.text())
     .then((result) => {
-      console.log(result);
+      const theDataArr = result.replace(/\n/g, " ");
+      console.log(theDataArr);
     });
 
   return (
