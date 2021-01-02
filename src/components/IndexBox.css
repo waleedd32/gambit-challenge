@@ -1,0 +1,10 @@
+.indexBox {
+  margin-right: 10px;
+  min-width: 50px;
+  text-align: center;
+  margin-bottom: 3px;
+  cursor: pointer;
+}
+.twoMaps__item .indexBox__padding {
+  padding: 16px;
+}
