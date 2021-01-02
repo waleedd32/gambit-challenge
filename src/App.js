@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-
+import "./components/ValueBox.css";
+import "./components/IndexBox.css";
 import TwoMaps from "./TwoMaps";
 function App() {
   const [data, setData] = useState([]);

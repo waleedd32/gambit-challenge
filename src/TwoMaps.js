@@ -4,16 +4,24 @@ import ValueBox from "./components/ValueBox";
 import "./components/ValueBox.css";
 import "./components/IndexBox.css";
 
-function TwoMaps({ sisalto }) {
+function TwoMaps({ searchTerm, filterResults, sisalto }) {
   return (
     <div className="twoMaps">
-      {sisalto.map((value) => (
-        <div>
-          <div>
-            <ValueBox value={value} />
-          </div>
-        </div>
-      ))}
+      {searchTerm === ""
+        ? sisalto.map((value, index) => (
+            <div>
+              <div className="twoMaps__item">
+                <ValueBox value={value} />
+              </div>
+            </div>
+          ))
+        : filterResults.map(({ avain, value }, index) => (
+            <div>
+              <div className="twoMaps__item">
+                <ValueBox value={value} />
+              </div>
+            </div>
+          ))}
     </div>
   );
 }
