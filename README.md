@@ -30,11 +30,11 @@ Now the main thing: I have put registered values into nice clean boxes using Mat
 ### Coding:
 
 Because of cors errors i'm using https://cors-anywhere.herokuapp.com/ (includes CORS headers in the response).
-The data offered from gambit was in txt format i had to convert it, first had to get rid of the new lines: replace(/\n/g, " ") then change the data into an array. Inside the second useEffect i'm setting data into key/values and from there taking value from it and passing to TwoMaps.js where that value is mapped and displayed to screen. Third useEffect setting data to avain/value and from there taking avain to filter with searchTerm(what number user writes to the input) then passing that also to TwoMaps.js. Inside TwoMaps.js i'm using inline if-else for knowing if user has written something in input if yes do the filtering and display this and if not the just display this.
+The data offered from gambit was in txt format i had to convert it, first had to get rid of the new lines: replace(/\n/g, " ") then change the data into an array. Inside the second useEffect i'm setting data into key/values and from there taking value from it and passing to TwoMaps.js, where that value is mapped and displayed to screen. In the third useEffect i'm setting data to avain/value and from there taking avain to filter with searchTerm(what number user writes to the input) then passing that also to TwoMaps.js. Inside TwoMaps.js i'm using inline if-else for knowing if user has written something in input, if yes do the filtering and display this and if not then just display this.
 
-Project is mobile friendly works on all sizes, it also has nice hovering effect when user hovers over index numbers (.hover1) it affecs values (.hover2) by making values larger and changing color & background color of it.
+Project is mobile friendly, it works on all sizes, it also has nice hovering effect when user hovers over index numbers (.hover1), it affecs values (.hover2) by making values larger and changing color & background color of it.
 
-Because components are one of the basic building blocks of React, i have components folder where i have Values, index of the boxes and a footer.
+Because components are one of the basic building blocks of React, i have components folder that contains components such as IndexBox, ValueBox and a footer.
 
 This application is hosted on Firebase and can be tried at:
 
