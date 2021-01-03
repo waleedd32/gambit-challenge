@@ -57,7 +57,7 @@ function App() {
         <div className="app__container">
           <h1 className="app__logo">TUF-2000M Registers</h1>
           <input
-            type="text"
+            type="number"
             value={searchTerm}
             placeholder="Search by index number"
             onChange={(e) => setSearchTerm(e.target.value)}
